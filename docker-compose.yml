@@ -1,8 +1,9 @@
 version: '3'
 
 services:
-  shopify:
-    container_name: shopify_app
+  mstest-shp:
+    image: mstest-shp:latest  # Define the image name
+    container_name: mstest-shp-container  # Define the container name
     build: .
     environment:
       # SHOPIFY_FLAG_STORE: [Your Store URL]
