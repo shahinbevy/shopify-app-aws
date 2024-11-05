@@ -1,0 +1,63 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:ap-south-1:127214158110:task-definition/ms-shp-tdf:1",
+    "containerDefinitions": [
+        {
+            "name": "ms-shp-app",
+            "image": "127214158110.dkr.ecr.eu-west-1.amazonaws.com/ms-shp-app:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "ms-shp-app-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "ulimits": [],
+            "systemControls": []
+        }
+    ],
+    "family": "ms-shp-tdf",
+    "executionRoleArn": "arn:aws:iam::127214158110:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "cpu": "1024",
+    "memory": "3072",
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2024-11-05T15:10:02.309Z",
+    "registeredBy": "arn:aws:iam::127214158110:root",
+    "tags": []
+}
